@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Fragranze.lk account to access your orders, wishlist, and manage your profile.">
+    <title>Login | Fragranze.lk - Your Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +94 76 123 4567</span>
+                <span><i class="fas fa-envelope"></i> info@fragranze.lk</span>
+                <span><i class="fas fa-truck"></i> Free Delivery on Orders Over LKR 5,000</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">F</div>
+                    <div class="logo-text">Fragranze<span>.lk</span></div>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for perfumes, brands, notes...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="login.html" class="header-action"><i class="far fa-user"></i><span>Account</span></a>
+                    <a href="wishlist.html" class="header-action"><i class="far fa-heart"></i><span>Wishlist</span><span class="badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="header-action"><i class="fas fa-shopping-bag"></i><span>Cart</span><span class="badge cart-count" style="display:none">0</span></a>
+                </div>
+                <button class="mobile-toggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown"><a href="products.html">Men's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Men's Collection</li>
+                            <li><a href="products.html?category=men-edp">Eau De Parfum</a></li>
+                            <li><a href="products.html?category=men-edt">Eau De Toilette</a></li>
+                            <li><a href="products.html?category=men-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=men-arabic">Arabic Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="products.html">Women's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Women's Collection</li>
+                            <li><a href="products.html?category=women-floral">Floral Perfumes</a></li>
+                            <li><a href="products.html?category=women-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=women-designer">Designer Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=unisex">Unisex Perfumes</a></li>
+                    <li class="dropdown"><a href="products.html">Body Care <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=body-lotion">Body Lotion</a></li>
+                            <li><a href="products.html?category=body-mist">Body Mist</a></li>
+                            <li><a href="products.html?category=face-wash">Face Wash</a></li>
+                            <li><a href="products.html?category=shower-gel">Shower Gel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=offers">Special Offers</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Auth Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div class="logo-icon" style="width: 60px; height: 60px; margin: 0 auto 15px; font-size: 1.5rem;">F</div>
+                <h2 style="font-family: var(--font-heading);">Welcome Back</h2>
+                <p class="subtitle">Sign in to access your account, orders, and wishlist</p>
+            </div>
+
+            <form class="auth-form" data-validate onsubmit="event.preventDefault(); const email=document.getElementById('loginEmail').value; const pass=document.getElementById('loginPassword').value; if(App.login(email, pass)) { window.location.href='index.html'; }">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address *</label>
+                    <div style="position: relative;">
+                        <i class="fas fa-envelope" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-gray);"></i>
+                        <input type="email" id="loginEmail" name="email" required placeholder="Enter your email" style="padding-left: 45px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password *</label>
+                    <div style="position: relative;">
+                        <i class="fas fa-lock" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-gray);"></i>
+                        <input type="password" id="loginPassword" name="password" required placeholder="Enter your password" style="padding-left: 45px;">
+                        <button type="button" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-gray);" onclick="const input=this.previousElementSibling; input.type=input.type==='password'?'text':'password'; this.innerHTML=input.type==='password'?'<i class=\'fas fa-eye\'></i>':'<i class=\'fas fa-eye-slash\'></i>';">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-gray); cursor: pointer;">
+                        <input type="checkbox" style="width: 16px; height: 16px; accent-color: var(--gold);"> Remember me
+                    </label>
+                    <a href="forgot-password.html" style="color: var(--gold); font-size: 0.9rem;">Forgot Password?</a>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+
+            <div class="auth-links">
+                <p style="color: var(--text-gray); margin-bottom: 15px;">Don't have an account?</p>
+                <a href="register.html" class="btn btn-gold-outline" style="width: 100%;">Create Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo-text">Fragranze<span style="color:#D4AF37">.lk</span></a>
+                    <p>Sri Lanka's premier destination for luxury perfumes and fragrances. We bring you authentic designer scents from around the world.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html"><i class="fas fa-chevron-right"></i> Shipping Policy</a></li>
+                        <li><a href="returns.html"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="track-order.html"><i class="fas fa-chevron-right"></i> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>42 Galle Road, Colombo 03, Sri Lanka</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+94 76 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@fragranze.lk</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fragranze.lk. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <span><i class="fab fa-cc-visa"></i> Visa</span>
+                    <span><i class="fab fa-cc-mastercard"></i> MasterCard</span>
+                    <span><i class="fas fa-university"></i> Bank Transfer</span>
+                    <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

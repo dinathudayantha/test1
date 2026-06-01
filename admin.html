@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Fragranze.lk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-shield-alt"></i> Admin Panel</span>
+                <span><i class="fas fa-user"></i> Welcome, Admin</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="index.html"><i class="fas fa-store"></i> View Store</a>
+                <a href="#" onclick="App.logout(); return false;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="admin.html" class="logo">
+                    <div class="logo-icon">F</div>
+                    <div class="logo-text">Fragranze<span>.lk</span></div>
+                </a>
+                <div class="header-actions">
+                    <a href="#" class="header-action"><i class="fas fa-bell"></i><span>Notifications</span><span class="badge">3</span></a>
+                    <a href="#" class="header-action"><i class="fas fa-cog"></i><span>Settings</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Section -->
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-grid">
+                <!-- Sidebar -->
+                <aside class="admin-sidebar">
+                    <h3>Dashboard Menu</h3>
+                    <ul class="admin-menu">
+                        <li><a href="#overview" class="active" onclick="showSection('overview'); return false;"><i class="fas fa-chart-line"></i> Overview</a></li>
+                        <li><a href="#products" onclick="showSection('products'); return false;"><i class="fas fa-box"></i> Products</a></li>
+                        <li><a href="#orders" onclick="showSection('orders'); return false;"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                        <li><a href="#customers" onclick="showSection('customers'); return false;"><i class="fas fa-users"></i> Customers</a></li>
+                        <li><a href="#categories" onclick="showSection('categories'); return false;"><i class="fas fa-tags"></i> Categories</a></li>
+                        <li><a href="#discounts" onclick="showSection('discounts'); return false;"><i class="fas fa-percent"></i> Discounts</a></li>
+                        <li><a href="#reports" onclick="showSection('reports'); return false;"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                        <li><a href="#settings" onclick="showSection('settings'); return false;"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Content -->
+                <div class="admin-content">
+                    <!-- Overview Section -->
+                    <div id="overview" class="admin-section-content">
+                        <h2 style="margin-bottom: 30px; font-family: var(--font-heading);">Dashboard Overview</h2>
+
+                        <div class="stats-cards">
+                            <div class="stat-card">
+                                <h4>Total Sales</h4>
+                                <div class="value">LKR 2.4M</div>
+                                <p style="font-size: 0.85rem; color: var(--success); margin: 5px 0 0;"><i class="fas fa-arrow-up"></i> 12% this month</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Total Orders</h4>
+                                <div class="value">1,284</div>
+                                <p style="font-size: 0.85rem; color: var(--success); margin: 5px 0 0;"><i class="fas fa-arrow-up"></i> 8% this month</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Total Customers</h4>
+                                <div class="value">856</div>
+                                <p style="font-size: 0.85rem; color: var(--success); margin: 5px 0 0;"><i class="fas fa-arrow-up"></i> 15% this month</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Products</h4>
+                                <div class="value">486</div>
+                                <p style="font-size: 0.85rem; color: var(--text-gray); margin: 5px 0 0;">Active listings</p>
+                            </div>
+                        </div>
+
+                        <div style="background: var(--white); padding: 30px; margin-top: 30px; border: 1px solid var(--border-gray);">
+                            <h3 style="margin-bottom: 20px;">Sales Analytics</h3>
+                            <canvas id="salesChart" style="max-height: 400px;"></canvas>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+                            <div style="background: var(--white); padding: 25px; border: 1px solid var(--border-gray);">
+                                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Recent Orders</h3>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Order ID</th><th>Customer</th><th>Amount</th><th>Status</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>#ORD-2026-001</td><td>John Doe</td><td>LKR 28,500</td><td><span class="status-badge status-completed">Completed</span></td></tr>
+                                        <tr><td>#ORD-2026-002</td><td>Jane Smith</td><td>LKR 45,000</td><td><span class="status-badge status-processing">Processing</span></td></tr>
+                                        <tr><td>#ORD-2026-003</td><td>Robert Brown</td><td>LKR 12,000</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+                                        <tr><td>#ORD-2026-004</td><td>Emily Davis</td><td>LKR 32,000</td><td><span class="status-badge status-completed">Completed</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="background: var(--white); padding: 25px; border: 1px solid var(--border-gray);">
+                                <h3 style="margin-bottom: 20px; font-size: 1.1rem;">Top Products</h3>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Product</th><th>Sales</th><th>Revenue</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Dior Sauvage EDP</td><td>234</td><td>LKR 6.7M</td></tr>
+                                        <tr><td>Chanel Coco Mademoiselle</td><td>189</td><td>LKR 6.0M</td></tr>
+                                        <tr><td>Versace Eros EDT</td><td>156</td><td>LKR 2.9M</td></tr>
+                                        <tr><td>Tom Ford Oud Wood</td><td>98</td><td>LKR 4.4M</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Section -->
+                    <div id="products" class="admin-section-content" style="display: none;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h2 style="font-family: var(--font-heading);">Manage Products</h2>
+                            <button class="btn btn-primary" onclick="App.showToast('Add Product feature coming soon', 'info')"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>ID</th><th>Product Name</th><th>Brand</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>P001</td><td>Dior Sauvage EDP</td><td>Dior</td><td>LKR 28,500</td><td>45</td><td><span class="status-badge status-completed">Active</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-edit"></i></button></td></tr>
+                                <tr><td>P002</td><td>Chanel Coco Mademoiselle</td><td>Chanel</td><td>LKR 32,000</td><td>32</td><td><span class="status-badge status-completed">Active</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-edit"></i></button></td></tr>
+                                <tr><td>P003</td><td>Versace Eros EDT</td><td>Versace</td><td>LKR 18,500</td><td>28</td><td><span class="status-badge status-completed">Active</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-edit"></i></button></td></tr>
+                                <tr><td>P004</td><td>Tom Ford Oud Wood</td><td>Tom Ford</td><td>LKR 45,000</td><td>15</td><td><span class="status-badge status-completed">Active</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-edit"></i></button></td></tr>
+                                <tr><td>P005</td><td>Armani Si Passione</td><td>Armani</td><td>LKR 22,000</td><td>0</td><td><span class="status-badge status-pending">Out of Stock</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-edit"></i></button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div id="orders" class="admin-section-content" style="display: none;">
+                        <h2 style="margin-bottom: 30px; font-family: var(--font-heading);">Manage Orders</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Order ID</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Actions</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>#ORD-2026-001</td><td>2026-05-28</td><td>John Doe</td><td>2</td><td>LKR 28,500</td><td>Cash on Delivery</td><td><span class="status-badge status-completed">Delivered</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>#ORD-2026-002</td><td>2026-05-29</td><td>Jane Smith</td><td>1</td><td>LKR 45,000</td><td>Visa</td><td><span class="status-badge status-processing">Shipped</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>#ORD-2026-003</td><td>2026-05-30</td><td>Robert Brown</td><td>3</td><td>LKR 12,000</td><td>MasterCard</td><td><span class="status-badge status-pending">Pending</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>#ORD-2026-004</td><td>2026-05-30</td><td>Emily Davis</td><td>1</td><td>LKR 32,000</td><td>Bank Transfer</td><td><span class="status-badge status-completed">Delivered</span></td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Customers Section -->
+                    <div id="customers" class="admin-section-content" style="display: none;">
+                        <h2 style="margin-bottom: 30px; font-family: var(--font-heading);">Manage Customers</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Orders</th><th>Total Spent</th><th>Actions</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>C001</td><td>John Doe</td><td>john@example.com</td><td>+94 76 123 4567</td><td>12</td><td>LKR 185,000</td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>C002</td><td>Jane Smith</td><td>jane@example.com</td><td>+94 77 234 5678</td><td>8</td><td>LKR 142,000</td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>C003</td><td>Robert Brown</td><td>robert@example.com</td><td>+94 78 345 6789</td><td>5</td><td>LKR 68,000</td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                                <tr><td>C004</td><td>Emily Davis</td><td>emily@example.com</td><td>+94 75 456 7890</td><td>15</td><td>LKR 210,000</td><td><button class="btn btn-gold-outline" style="padding: 5px 15px; font-size: 0.8rem;"><i class="fas fa-eye"></i></button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Other sections placeholder -->
+                    <div id="categories" class="admin-section-content" style="display: none;">
+                        <h2 style="font-family: var(--font-heading);">Manage Categories</h2>
+                        <p style="color: var(--text-gray); margin-top: 20px;">Category management features coming soon.</p>
+                    </div>
+                    <div id="discounts" class="admin-section-content" style="display: none;">
+                        <h2 style="font-family: var(--font-heading);">Manage Discounts</h2>
+                        <p style="color: var(--text-gray); margin-top: 20px;">Discount management features coming soon.</p>
+                    </div>
+                    <div id="reports" class="admin-section-content" style="display: none;">
+                        <h2 style="font-family: var(--font-heading);">Sales Reports</h2>
+                        <p style="color: var(--text-gray); margin-top: 20px;">Detailed reporting features coming soon.</p>
+                    </div>
+                    <div id="settings" class="admin-section-content" style="display: none;">
+                        <h2 style="font-family: var(--font-heading);">Settings</h2>
+                        <p style="color: var(--text-gray); margin-top: 20px;">System settings features coming soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.admin-section-content').forEach(el => el.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+            document.querySelectorAll('.admin-menu a').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

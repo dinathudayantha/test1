@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout at Fragranze.lk. Complete your order for luxury perfumes with multiple payment options including Cash on Delivery.">
+    <title>Checkout | Fragranze.lk - Secure Payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +94 76 123 4567</span>
+                <span><i class="fas fa-envelope"></i> info@fragranze.lk</span>
+                <span><i class="fas fa-truck"></i> Free Delivery on Orders Over LKR 5,000</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">F</div>
+                    <div class="logo-text">Fragranze<span>.lk</span></div>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for perfumes, brands, notes...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="login.html" class="header-action"><i class="far fa-user"></i><span>Account</span></a>
+                    <a href="wishlist.html" class="header-action"><i class="far fa-heart"></i><span>Wishlist</span><span class="badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="header-action"><i class="fas fa-shopping-bag"></i><span>Cart</span><span class="badge cart-count" style="display:none">0</span></a>
+                </div>
+                <button class="mobile-toggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown"><a href="products.html">Men's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Men's Collection</li>
+                            <li><a href="products.html?category=men-edp">Eau De Parfum</a></li>
+                            <li><a href="products.html?category=men-edt">Eau De Toilette</a></li>
+                            <li><a href="products.html?category=men-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=men-arabic">Arabic Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="products.html">Women's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Women's Collection</li>
+                            <li><a href="products.html?category=women-floral">Floral Perfumes</a></li>
+                            <li><a href="products.html?category=women-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=women-designer">Designer Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=unisex">Unisex Perfumes</a></li>
+                    <li class="dropdown"><a href="products.html">Body Care <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=body-lotion">Body Lotion</a></li>
+                            <li><a href="products.html?category=body-mist">Body Mist</a></li>
+                            <li><a href="products.html?category=face-wash">Face Wash</a></li>
+                            <li><a href="products.html?category=shower-gel">Shower Gel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=offers">Special Offers</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Secure Checkout</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="cart.html">Cart</a>
+                <span>/</span>
+                <span>Checkout</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <form id="checkout-form" data-validate>
+                        <!-- Contact Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user" style="color: var(--gold); margin-right: 10px;"></i>Contact Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Mobile Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+94 76 123 4567">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-shipping-fast" style="color: var(--gold); margin-right: 10px;"></i>Shipping Address</h3>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Main Street">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required placeholder="Colombo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="district">District *</label>
+                                    <select id="district" name="district" required>
+                                        <option value="">Select District</option>
+                                        <option value="colombo">Colombo</option>
+                                        <option value="gampaha">Gampaha</option>
+                                        <option value="kalutara">Kalutara</option>
+                                        <option value="kandy">Kandy</option>
+                                        <option value="galle">Galle</option>
+                                        <option value="matara">Matara</option>
+                                        <option value="jaffna">Jaffna</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal">Postal Code *</label>
+                                <input type="text" id="postal" name="postal" required placeholder="00100">
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Order Notes (Optional)</label>
+                                <textarea id="notes" name="notes" placeholder="Special instructions for delivery..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card" style="color: var(--gold); margin-right: 10px;"></i>Payment Method</h3>
+                            <div class="payment-options">
+                                <div class="payment-option selected">
+                                    <input type="radio" name="payment" id="cod" value="cod" checked>
+                                    <label for="cod">
+                                        <span class="payment-icon"><i class="fas fa-money-bill-wave"></i></span>
+                                        <div>
+                                            <strong>Cash on Delivery</strong>
+                                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Pay when you receive your order</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="visa" value="visa">
+                                    <label for="visa">
+                                        <span class="payment-icon"><i class="fab fa-cc-visa"></i></span>
+                                        <div>
+                                            <strong>Visa Card</strong>
+                                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Secure online payment</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="mastercard" value="mastercard">
+                                    <label for="mastercard">
+                                        <span class="payment-icon"><i class="fab fa-cc-mastercard"></i></span>
+                                        <div>
+                                            <strong>MasterCard</strong>
+                                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Secure online payment</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="bank" value="bank">
+                                    <label for="bank">
+                                        <span class="payment-icon"><i class="fas fa-university"></i></span>
+                                        <div>
+                                            <strong>Bank Transfer</strong>
+                                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Direct bank deposit</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.1rem;">
+                            <i class="fas fa-lock" style="margin-right: 10px;"></i> Place Order Securely
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="cart-summary" style="position: sticky; top: 120px;">
+                    <h3>Order Summary</h3>
+
+                    <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-gray);">
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78a084bc4b90?w=80&q=80" alt="Dior" style="width: 60px; height: 60px; object-fit: contain; background: var(--light-gray);">
+                            <div style="flex: 1;">
+                                <p style="font-weight: 600; margin: 0; font-size: 0.9rem;">Dior Sauvage EDP</p>
+                                <p style="color: var(--text-gray); margin: 0; font-size: 0.8rem;">Qty: 1</p>
+                            </div>
+                            <span style="font-weight: 600;">LKR 28,500</span>
+                        </div>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=80&q=80" alt="Chanel" style="width: 60px; height: 60px; object-fit: contain; background: var(--light-gray);">
+                            <div style="flex: 1;">
+                                <p style="font-weight: 600; margin: 0; font-size: 0.9rem;">Coco Mademoiselle EDP</p>
+                                <p style="color: var(--text-gray); margin: 0; font-size: 0.8rem;">Qty: 1</p>
+                            </div>
+                            <span style="font-weight: 600;">LKR 32,000</span>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=80&q=80" alt="Lattafa" style="width: 60px; height: 60px; object-fit: contain; background: var(--light-gray);">
+                            <div style="flex: 1;">
+                                <p style="font-weight: 600; margin: 0; font-size: 0.9rem;">Lattafa Raghba EDP</p>
+                                <p style="color: var(--text-gray); margin: 0; font-size: 0.8rem;">Qty: 2</p>
+                            </div>
+                            <span style="font-weight: 600;">LKR 17,000</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>LKR 77,500</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>LKR 350</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (0%)</span>
+                        <span>LKR 0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>LKR 77,850</span>
+                    </div>
+
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(212,175,55,0.1); border-left: 3px solid var(--gold);">
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--dark-gray);">
+                            <i class="fas fa-shield-alt" style="color: var(--gold); margin-right: 8px;"></i>
+                            Your payment information is processed securely. We do not store credit card details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo-text">Fragranze<span style="color:#D4AF37">.lk</span></a>
+                    <p>Sri Lanka's premier destination for luxury perfumes and fragrances. We bring you authentic designer scents from around the world.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html"><i class="fas fa-chevron-right"></i> Shipping Policy</a></li>
+                        <li><a href="returns.html"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="track-order.html"><i class="fas fa-chevron-right"></i> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>42 Galle Road, Colombo 03, Sri Lanka</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+94 76 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@fragranze.lk</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fragranze.lk. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <span><i class="fab fa-cc-visa"></i> Visa</span>
+                    <span><i class="fab fa-cc-mastercard"></i> MasterCard</span>
+                    <span><i class="fas fa-university"></i> Bank Transfer</span>
+                    <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>

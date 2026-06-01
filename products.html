@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop luxury perfumes and fragrances at Fragranze.lk. Browse designer brands, Arabic perfumes, and exclusive collections with best prices in Sri Lanka.">
+    <title>Shop Perfumes | Fragranze.lk - Sri Lanka's Luxury Perfume Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +94 76 123 4567</span>
+                <span><i class="fas fa-envelope"></i> info@fragranze.lk</span>
+                <span><i class="fas fa-truck"></i> Free Delivery on Orders Over LKR 5,000</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">F</div>
+                    <div class="logo-text">Fragranze<span>.lk</span></div>
+                </a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for perfumes, brands, notes...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="login.html" class="header-action"><i class="far fa-user"></i><span>Account</span></a>
+                    <a href="wishlist.html" class="header-action"><i class="far fa-heart"></i><span>Wishlist</span><span class="badge wishlist-count" style="display:none">0</span></a>
+                    <a href="cart.html" class="header-action"><i class="fas fa-shopping-bag"></i><span>Cart</span><span class="badge cart-count" style="display:none">0</span></a>
+                </div>
+                <button class="mobile-toggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown"><a href="products.html">Men's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Men's Collection</li>
+                            <li><a href="products.html?category=men-edp">Eau De Parfum</a></li>
+                            <li><a href="products.html?category=men-edt">Eau De Toilette</a></li>
+                            <li><a href="products.html?category=men-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=men-arabic">Arabic Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="products.html">Women's Perfumes <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Women's Collection</li>
+                            <li><a href="products.html?category=women-floral">Floral Perfumes</a></li>
+                            <li><a href="products.html?category=women-luxury">Luxury Perfumes</a></li>
+                            <li><a href="products.html?category=women-designer">Designer Perfumes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=unisex">Unisex Perfumes</a></li>
+                    <li class="dropdown"><a href="products.html">Body Care <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=body-lotion">Body Lotion</a></li>
+                            <li><a href="products.html?category=body-mist">Body Mist</a></li>
+                            <li><a href="products.html?category=face-wash">Face Wash</a></li>
+                            <li><a href="products.html?category=shower-gel">Shower Gel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=offers">Special Offers</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Our Collection</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Shop</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section section-padding">
+        <div class="container">
+            <div style="display:grid; grid-template-columns: 280px 1fr; gap: 40px;">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="dior" id="brand-dior"><label for="brand-dior">Dior</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="chanel" id="brand-chanel"><label for="brand-chanel">Chanel</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="versace" id="brand-versace"><label for="brand-versace">Versace</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="armani" id="brand-armani"><label for="brand-armani">Armani</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="tom-ford" id="brand-tomford"><label for="brand-tomford">Tom Ford</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="hugo-boss" id="brand-hugoboss"><label for="brand-hugoboss">Hugo Boss</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="paco-rabanne" id="brand-paco"><label for="brand-paco">Paco Rabanne</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="lattafa" id="brand-lattafa"><label for="brand-lattafa">Lattafa</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="afnan" id="brand-afnan"><label for="brand-afnan">Afnan</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-brand" value="rasasi" id="brand-rasasi"><label for="brand-rasasi">Rasasi</label></div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Gender</h4>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="men" id="gender-men"><label for="gender-men">Men</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="women" id="gender-women"><label for="gender-women">Women</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="unisex" id="gender-unisex"><label for="gender-unisex">Unisex</label></div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Fragrance Type</h4>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="edp" id="type-edp"><label for="type-edp">Eau De Parfum</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="edt" id="type-edt"><label for="type-edt">Eau De Toilette</label></div>
+                        <div class="filter-option"><input type="checkbox" class="filter-type" value="edc" id="type-edc"><label for="type-edc">Eau De Cologne</label></div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range (LKR)</h4>
+                        <div class="price-range">
+                            <input type="number" class="price-min" placeholder="Min" min="0">
+                            <input type="number" class="price-max" placeholder="Max" min="0">
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div>
+                    <div class="sort-bar">
+                        <p class="product-count">Showing 12 of 48 products</p>
+                        <select class="sort-select">
+                            <option value="">Sort By</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="bestseller">Best Selling</option>
+                        </select>
+                    </div>
+                    <div class="products-grid">
+                        <div class="product-card" data-id="p001" data-brand="dior" data-type="edp" data-gender="men" data-price="28500" data-new="false" data-bestseller="true">
+                            <span class="product-badge badge-bestseller">Bestseller</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1541643600914-78a084bc4b90?w=400&q=80" alt="Dior Sauvage" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Dior</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p001">Sauvage Eau de Parfum</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(128)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 28,500</span><span class="price-original">LKR 32,000</span><span class="price-discount">-11%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p002" data-brand="chanel" data-type="edp" data-gender="women" data-price="32000" data-new="false" data-bestseller="true">
+                            <span class="product-badge badge-bestseller">Bestseller</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80" alt="Chanel Coco" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Chanel</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p002">Coco Mademoiselle EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="count">(215)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 32,000</span><span class="price-original">LKR 35,500</span><span class="price-discount">-10%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p003" data-brand="versace" data-type="edt" data-gender="men" data-price="18500" data-new="false" data-bestseller="true">
+                            <span class="product-badge badge-bestseller">Bestseller</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1585386959984-a28d4db4e55b?w=400&q=80" alt="Versace Eros" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Versace</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p003">Eros Eau de Toilette</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(89)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 18,500</span><span class="price-original">LKR 21,000</span><span class="price-discount">-12%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p004" data-brand="tom-ford" data-type="edp" data-gender="unisex" data-price="45000" data-new="false" data-bestseller="false">
+                            <span class="product-badge badge-sale">Sale</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&q=80" alt="Tom Ford Oud Wood" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Tom Ford</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p004">Oud Wood Eau de Parfum</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="count">(76)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 45,000</span><span class="price-original">LKR 52,000</span><span class="price-discount">-13%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p005" data-brand="armani" data-type="edp" data-gender="women" data-price="22000" data-new="false" data-bestseller="true">
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&q=80" alt="Armani Si" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Armani</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p005">Si Passione EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(167)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 22,000</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p006" data-brand="hugo-boss" data-type="edt" data-gender="men" data-price="16500" data-new="false" data-bestseller="true">
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1523293188086-b15e4afcf3ae?w=400&q=80" alt="Hugo Boss" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Hugo Boss</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p006">Boss Bottled EDT</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="count">(94)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 16,500</span><span class="price-original">LKR 18,500</span><span class="price-discount">-11%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p007" data-brand="paco-rabanne" data-type="edt" data-gender="men" data-price="19500" data-new="false" data-bestseller="true">
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&q=80" alt="Paco Rabanne" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Paco Rabanne</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p007">1 Million EDT</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(203)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 19,500</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p008" data-brand="lattafa" data-type="edp" data-gender="unisex" data-price="8500" data-new="false" data-bestseller="true">
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&q=80" alt="Lattafa Raghba" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Lattafa</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p008">Raghba EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="count">(312)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 8,500</span><span class="price-original">LKR 10,000</span><span class="price-discount">-15%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p009" data-brand="afnan" data-type="edp" data-gender="men" data-price="12000" data-new="true" data-bestseller="false">
+                            <span class="product-badge badge-new">New</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1541643600914-78a084bc4b90?w=400&q=80" alt="Afnan Supremacy" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Afnan</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p009">Supremacy Silver EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><span class="count">(45)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 12,000</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p010" data-brand="rasasi" data-type="edp" data-gender="men" data-price="9500" data-new="true" data-bestseller="false">
+                            <span class="product-badge badge-new">New</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1585386959984-a28d4db4e55b?w=400&q=80" alt="Rasasi Shuhrah" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Rasasi</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p010">Shuhrah EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(38)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 9,500</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p011" data-brand="dior" data-type="edp" data-gender="women" data-price="35000" data-new="true" data-bestseller="false">
+                            <span class="product-badge badge-new">New</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80" alt="Dior Jadore" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Dior</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p011">J'adore EDP</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="count">(52)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 35,000</span><span class="price-original">LKR 38,500</span><span class="price-discount">-9%</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-id="p012" data-brand="chanel" data-type="edt" data-gender="women" data-price="28000" data-new="true" data-bestseller="false">
+                            <span class="product-badge badge-new">New</span>
+                            <div class="product-actions">
+                                <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                                <button class="product-action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="product-image"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&q=80" alt="Chanel Chance" loading="lazy"></div>
+                            <div class="product-info">
+                                <p class="product-brand">Chanel</p>
+                                <h3 class="product-name"><a href="product-details.html?id=p012">Chance Eau Tendre EDT</a></h3>
+                                <div class="product-rating"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><span class="count">(41)</span></div>
+                                <div class="product-price"><span class="price-current">LKR 28,000</span></div>
+                                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo-text">Fragranze<span style="color:#D4AF37">.lk</span></a>
+                    <p>Sri Lanka's premier destination for luxury perfumes and fragrances. We bring you authentic designer scents from around the world.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html"><i class="fas fa-chevron-right"></i> Shipping Policy</a></li>
+                        <li><a href="returns.html"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="track-order.html"><i class="fas fa-chevron-right"></i> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>42 Galle Road, Colombo 03, Sri Lanka</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+94 76 123 4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@fragranze.lk</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fragranze.lk. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <span><i class="fab fa-cc-visa"></i> Visa</span>
+                    <span><i class="fab fa-cc-mastercard"></i> MasterCard</span>
+                    <span><i class="fas fa-university"></i> Bank Transfer</span>
+                    <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
